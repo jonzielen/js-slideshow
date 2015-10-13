@@ -6,7 +6,7 @@ for (var i = 0; i < slides.length; i++) {
         lowerNavList++;
     }
 }
-//console.log(lowerNavList);
+
 addNavButtons(lowerNavList);
 
 function addNavButtons(lowerNavList) {
@@ -15,7 +15,6 @@ function addNavButtons(lowerNavList) {
     document.querySelector('.slideshow-nav').appendChild(div);
 
     var navList = document.getElementById('nav-list');
-
 
     for (var i = 0; i < lowerNavList; i++) {
         var li = document.createElement('li');
@@ -26,5 +25,4 @@ function addNavButtons(lowerNavList) {
 
         navList.appendChild(li);
     }
-
 }
