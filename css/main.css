@@ -1,10 +1,12 @@
 body {
     background-color: #ADD8E6;
 }
+
 .slideshow-wrapper {
     margin: 0 auto;
     width: 200px;
 }
+
 .slideshow-holder {
     width: 200px;
     height: 200px;
@@ -13,22 +15,30 @@ body {
     background-color: #fff;
     margin: 0 0 15px 0;
 }
-.slideshow-nav {}
+
 .slideshow {
     width: 200px;
     height: 200px;
     position: absolute;
     opacity: 0;
     transition: all 0.5s ease;
+    font-size: 24px;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    color: #F08080;
 }
+
 .slideshow#active {
     opacity: 1;
 }
+
 #nav-list {
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
 #nav-list li {
     display: inline-block;
     padding: 2px 5px;
@@ -38,6 +48,7 @@ body {
     color: #F08080;
     transition: all 0.5s ease;
 }
+
 li#selected {
     background-color: #F08080;
     color: #E0FFFF

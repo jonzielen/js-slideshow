@@ -12,8 +12,8 @@ function addNavButtons(lowerNavList) {
 
     for (var i = 0; i < lowerNavList; i++) {
         var li = document.createElement('li');
-        li.innerHTML = i + 1;
-        li.setAttribute('data-index', i + 1);
+        li.innerHTML = i+1;
+        li.setAttribute('data-index', i+1);
         if (i == 0) {
             li.setAttribute('id', 'selected');
         }
@@ -35,5 +35,5 @@ for (var i = 0; i < fullNavList.length; i++) {
         document.getElementById('active').setAttribute('id', '');
         document.getElementsByClassName('slideshow')[newActiveIndex-1].setAttribute('id', 'active');
 
-    }, false);
+    });
 }
