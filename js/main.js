@@ -82,3 +82,9 @@ function navLiUpdate(activeIndex) {
     document.querySelector('#nav-list #selected').setAttribute('id', '');
     document.querySelector('#nav-list li[data-index="' + activeIndex + '"]').setAttribute('id', 'selected');
 }
+
+function limit(slides, activeIndex) {
+    if (activeIndex > 0 && activeIndex <= slides) {
+        return true;
+    }
+}
