@@ -13,8 +13,8 @@ function addNavButtons(lowerNavList) {
 
     for (var i = 0; i < lowerNavList; i++) {
         var li = document.createElement('li');
-        li.innerHTML = i+1;
-        li.setAttribute('data-index', i+1);
+        li.innerHTML = i + 1;
+        li.setAttribute('data-index', i + 1);
         if (i == 0) {
             li.setAttribute('id', 'selected');
         }
@@ -26,7 +26,7 @@ function addNavButtons(lowerNavList) {
 // add data-index to slideshow
 function slideshowIndex(slides) {
     for (var i = 0; i < slides; i++) {
-        document.getElementsByClassName('slideshow')[i].setAttribute('data-index', i+1);
+        document.getElementsByClassName('slideshow')[i].setAttribute('data-index', i + 1);
     }
 }
 
@@ -39,13 +39,13 @@ for (var i = 0; i < fullNavList.length; i++) {
         this.setAttribute('id', 'selected');
 
         var activeIndex = this.getAttribute('data-index');
-        slideshowUpdate(activeIndex-1);
+        slideshowUpdate(activeIndex - 1);
     });
 }
 
 // build nav arrows
 var prevArrow = document.createElement('div'),
-nextArrow = document.createElement('div');
+    nextArrow = document.createElement('div');
 
 prevArrow.setAttribute('id', 'prev');
 prevArrow.innerHTML = '<';
@@ -59,14 +59,14 @@ wrapper.appendChild(nextArrow);
 // arrows nav
 prevArrow.addEventListener('click', function() {
     var activeIndex = getActiveIndex();
-    slideshowUpdate(activeIndex-2);
-    navLiUpdate(activeIndex-1);
+    slideshowUpdate(activeIndex - 2);
+    navLiUpdate(activeIndex - 1);
 });
 
 nextArrow.addEventListener('click', function() {
     var activeIndex = getActiveIndex();
     slideshowUpdate(activeIndex);
-    navLiUpdate(activeIndex+1);
+    navLiUpdate(activeIndex + 1);
 });
 
 function getActiveIndex() {
@@ -80,5 +80,5 @@ function slideshowUpdate(activeIndex) {
 
 function navLiUpdate(activeIndex) {
     document.querySelector('#nav-list #selected').setAttribute('id', '');
-    document.querySelector('#nav-list li[data-index="'+activeIndex+'"]').setAttribute('id', 'selected');
+    document.querySelector('#nav-list li[data-index="' + activeIndex + '"]').setAttribute('id', 'selected');
 }
