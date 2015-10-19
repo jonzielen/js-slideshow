@@ -61,6 +61,7 @@ li#selected {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-weight: bold;
 }
 #next:hover, #prev:hover {
     opacity: 1;
